@@ -11,6 +11,10 @@ export default defineNuxtConfig({
   build: {
     transpile: ["trpc-nuxt"]
   },
+  devServer: {
+    host: "localhost",
+    port: 3070
+  },
   modules: ["@sidebase/nuxt-auth", "@nuxtjs/eslint-module", "@pinia/nuxt"],
   auth: {
     origin: envConfig.AUTH_ORIGIN, // The origin is set to the development origin. Change this when deploying to production by setting `origin` in this config before build-time or by exporting `AUTH_ORIGIN` by running `export AUTH_ORIGIN=...`
